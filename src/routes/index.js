@@ -32,4 +32,16 @@ router.get('/block/:blockHash', async (req, res, next) => {
   }
 });
 
+router.get('/send-raw-tx/:signedHex', async (req, res, next) => {
+  const method = 'sendrawtransaction';
+  const params = [req.params.signedHex];
+
+  try {
+    const result = await btcRPC.query(method, params);
+    res.json(result);
+  } catch (err) {
+    res.json({ message: `Error with RPC call ${method}: ${err}` });
+  }
+});
+
 export default router;
