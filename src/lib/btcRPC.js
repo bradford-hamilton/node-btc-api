@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 class btcRPC {
-  static async query(method, params = []) {
+  static async query(method, params) {
     const config = {
       method: 'post',
       url: process.env.BTC_RPC_URL,
