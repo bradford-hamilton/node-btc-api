@@ -14,12 +14,12 @@ class btcRPC {
         password: process.env.BTC_RPC_PASSWORD,
       },
       data: JSON.stringify({
-        'jsonrpc': '2.0',
-        'id': method,
-        'method': method,
-        'params': params,
+        jsonrpc: 2.0,
+        id: method,
+        method: method,
+        params: params,
       }),
-    }
+    };
 
     try {
       const result = await axios(config);
