@@ -1,4 +1,4 @@
-Run Node:
+Run Node for development:
 ```
 docker run -v bitcoind-data:/bitcoin --name=bitcoind-node -d \
     -p 8333:8333 \
