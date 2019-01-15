@@ -25,7 +25,7 @@ class btcRPC {
       const result = await axios(config);
       return result.data;
     } catch (err) {
-      return err;
+      throw new Error(err.response.data.error.message);
     }
   }
 }
