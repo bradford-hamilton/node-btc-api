@@ -1,4 +1,4 @@
-Run Node for development:
+Run btc node for development:
 ```
 docker run -v bitcoind-data:/bitcoin --name=bitcoind-node -d \
     -p 8333:8333 \
@@ -11,4 +11,21 @@ docker run -v bitcoind-data:/bitcoin --name=bitcoind-node -d \
 ```
 
 Run API:
-`npm start`
+```
+npm start
+```
+
+Run Tests:
+```
+npm test
+```
+
+Run Linter:
+```
+npm run lint
+```
+
+Prod Build:
+```
+npm run build
+```
